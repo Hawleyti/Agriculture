@@ -6,6 +6,11 @@
     <title>Document</title>
     <script src="./Control_file/common.js"></script>
     <link rel="stylesheet" href="./Control_file/style.css">
+    <script>
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+          window.location.href = 'Login.html';
+      }
+  </script>
 </head>
 <body>
   <div id="replace_with_navbar"></div>  <!-- 导航栏 -->
