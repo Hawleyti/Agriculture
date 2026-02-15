@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>农业资源库</title>
+    <script src="../Control_file/common.js"></script>
+    <link rel="stylesheet" href="../Control_file/style.css" />
+    <style>
+      #drug {
+        color: rgb(0, 0, 0);
+      }
+      .content .category {
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="replace_with_navbar"></div>
+    <!-- 导航栏 -->
+    <div class="location-tag">
+      <span>当前位置</span>
+      <span class="arrow">&gt;</span>
+      <span id="currentPage">药品</span>
+      <span class="arrow">&gt;</span>
+      <span class="arrow">土豆</span>
+    </div>
+
+    <div class="content">
+      <table>
+        <colgroup>
+          <col style="width: 15%" />
+          <!-- 第1列 -->
+          <col style="width: 35%" />
+          <!-- 第2列（文字列） -->
+          <col style="width: 25%" />
+          <!-- 第3列（图片） -->
+          <col style="width: 25%" />
+          <!-- 第4列（图片） -->
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th  colspan="4" class="section-title">一、基本信息</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>品种</td>
+          <td colspan="3">利哈伊土豆（中晚熟品种）</td>
+        </tr>
+        <tr>
+          <td>种植时间</td>
+          <td colspan="3">4月15日-5月初（地温10度以上左右并稳定，土壤不潮湿时种植，温度太低会导致不出苗，容易腐烂。）</td>
+        </tr>
+        <tr>
+          <td>生长周期</td>
+          <td colspan="3">90天</td>
+        </tr>
+        <tr>
+          <td>温度</td>
+          <td colspan="3">土豆是一种喜凉作物，与其他作物相比生长温度低一些。
+            <ul>
+              <li>苗期最适宜生长温度为16-22℃，27℃以上高温会导致叶片皱缩，32-34℃茎叶生长缓慢，超过40℃停止生长。</li>
+              <li>块茎膨大最适宜温度为17~19°C，温度超过  29°C以上块茎停止膨大。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>光照</td>
+          <td colspan="3">土豆是喜光作物，光照强度不足或栽植过密，会使茎叶徒长，块茎形成延迟，抗病能力降低。</td>
+        </tr>
+        <tr>
+          <td>土壤</td>
+          <td colspan="3">土豆喜欢疏松透气、有机质含量高、排水良好的沙壤土。土太粘、土面板结会推迟出苗时间，影响根系的扩散和植株生长，造成植株矮小、叶片卷皱，署块畸形等问题。</td>
+        </tr>
+        <tr>
+          <td>PH </td>
+          <td colspan="3">喜酸不耐碱， 5.5-6.0 （可抗黑星病）</td>
+        </tr>
+        <tr>
+          <td>株行距</td>
+          <td colspan="3">行距75cm, 株距22.5cm.</td>
+        </tr>
+        <tr>
+          <td>种植深度</td>
+          <td colspan="3">种植深度：8cm左右（土豆距离土面）</td>
+        </tr>
+
+        <thead>
+          <tr>
+            <th  colspan="4" class="section-title">二、种植前准备</th>
+          </tr>
+        </thead>
+        <tr>
+            <th  colspan="4">催芽</th>
+          </tr>
+      
+        <tr>
+          <td rowspan="5">催芽方法</td>
+          <td colspan="3">机器播种不需要催芽，只需在种植前一周，将种薯从恒温库拿出来在常温条件下存放，使其热身打破休眠即可。</td>
+        </tr>
+        <tr>
+          <td colspan="3">小菜园种植，各家据土豆保存的情况，
+            <ul>
+              <li>如果保存的好，一直没长芽，就在播种前半个月左右拿到常温的地方让它发芽，等芽长到1公分左右，让其渐暴露在散射光（非阳光直接照射）下壮芽。</li>
+              <li>如果保存的不好，土豆提前长芽了，就把芽子掰掉，避免土豆芽长的太长消耗能量，然后放在常温下防止1-2周，让其再次发芽。等芽长到1公分左右，让其渐暴露在散射光（非阳光直接照射）下壮芽。</li>
+            </ul>          
+</td>
+        </tr>
+        <tr>
+          <td colspan="3">注：芽点见光以前是白色，比较脆弱、易断，见光以后会变成紫色，不易折断。</td>
+        </tr>
+        <tr>
+          <td>注意事项
+            <ol>
+              <li>不要将种薯直接放在太阳底下晒
+</li>
+              <li>轻拿轻放，防止断芽
+</li>
+              <li>保存种子的地方不能太干燥，容易缩水。
+</li>
+            </ol>
+          </td>
+  <td colspan="2">
+    <div class="enemies">
+      <figure>
+        <img
+          src="../images/20260214_tudou13.jpg"
+          onclick="openModal(this)"
+        />
+      </figure>
+      <figure>
+        <img
+          src="../images/20260214_tudou16.jpg"
+          onclick="openModal(this)"
+        />
+      </figure>
+    </div>
+  </td>
+</tr>
+
+
+
+
+
+
+  </table>
+</div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="fullImage" />
+      <div id="captionText"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 土豆</p>
+    </footer>
+  </body>
+</html>

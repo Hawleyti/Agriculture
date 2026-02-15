@@ -248,36 +248,26 @@ document.addEventListener('DOMContentLoaded', function() {
 // 左侧边栏控制区
 document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("overlay");
     const btn = document.getElementById("toggleBtn");
-    const content = document.getElementById("mainContent");
 
-    // 检查核心元素是否存在
-    if (!sidebar || !btn) return;
-
-    function toggleSidebar() {
-        sidebar.classList.toggle("show");
-        if (overlay) overlay.classList.toggle("show");
-        if (content) content.classList.toggle("shift");
-
-        // 保存状态到本地
-        localStorage.setItem("sidebarStatus", sidebar.classList.contains("show"));
+    function openSidebar() {
+        sidebar.classList.add("show");
+        btn.textContent = "✕";
     }
 
-    btn.onclick = toggleSidebar;
-    if (overlay) overlay.onclick = toggleSidebar;
+    function closeSidebar() {
+        sidebar.classList.remove("show");
+        btn.textContent = "☰";
+    }
 
-    // ESC 键关闭逻辑
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && sidebar.classList.contains("show")) {
-            toggleSidebar();
-        }
+    btn.onclick = (e) => {
+        e.stopPropagation();
+        sidebar.classList.contains("show") ? closeSidebar() : openSidebar();
+    };
+
+    document.addEventListener("click", () => {
+        if (sidebar.classList.contains("show")) closeSidebar();
     });
 
-    // 页面刷新后恢复之前的状态
-    if (localStorage.getItem("sidebarStatus") === "true") {
-        sidebar.classList.add("show");
-        if (overlay) overlay.classList.add("show");
-        if (content) content.classList.add("shift");
-    }
+    sidebar.onclick = e => e.stopPropagation();
 });
